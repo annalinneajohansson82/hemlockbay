@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: "Catalogue"
+permalink: "/entries/"
+---
+
+<p class="plate">Catalogue of Entries</p>
+
+<header class="specimen">
+  <h1 class="specimen__binomial">Cryptobiological Entries</h1>
+  <p class="specimen__common">Classified specimens of record</p>
+</header>
+
+<ul class="catalogue-list">
+  {% for entry in collections.entries %}
+    <li>
+      <span class="catalogue-list__plate">
+        {% if entry.data.tab %}Tab. {{ entry.data.tab | roman }}{% else %}&mdash;{% endif %}
+      </span>
+      <a href="{{ entry.url }}">
+        <em>{{ entry.data.binomial or entry.data.title }}</em>{% if entry.data.common %} &middot; {{ entry.data.common }}{% endif %}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

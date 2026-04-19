@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="institution">
+  <p class="plate">Institution of Record</p>
+
+  <header class="specimen">
+    <h1 class="specimen__binomial">{{ name or title }}</h1>
+    {% if motto %}<p class="specimen__common">{{ motto }}</p>{% endif %}
+  </header>
+
+  {{ content | safe }}
+</article>

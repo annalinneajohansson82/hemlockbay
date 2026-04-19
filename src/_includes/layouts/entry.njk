@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="entry">
+  {% if tab or plate %}
+    <p class="plate">
+      {% if tab %}Tab. {{ tab | roman }}{% endif %}
+      {% if tab and plate %} &middot; {% endif %}
+      {% if plate %}Pl. {{ plate | roman }}{% endif %}
+      {% if institute %} &middot; {{ institute }}{% endif %}
+    </p>
+  {% endif %}
+
+  <header class="specimen">
+    <h1 class="specimen__binomial">{{ binomial or title }}</h1>
+    {% if common %}<p class="specimen__common">{{ common }}</p>{% endif %}
+  </header>
+
+  {{ content | safe }}
+</article>

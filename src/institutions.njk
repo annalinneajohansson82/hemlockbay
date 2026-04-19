@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+title: "Institutions"
+permalink: "/institutions/"
+---
+
+<p class="plate">Register of Institutions</p>
+
+<header class="specimen">
+  <h1 class="specimen__binomial">Institutions of Record</h1>
+  <p class="specimen__common">Of public and restricted standing</p>
+</header>
+
+<ul class="catalogue-list">
+  {% for inst in collections.institutions %}
+    <li>
+      <a href="{{ inst.url }}">
+        {{ inst.data.name or inst.data.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
