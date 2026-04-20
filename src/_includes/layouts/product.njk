@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="product">
+  {% if item_id %}
+    <p class="plate">Accession No. {{ item_id }}</p>
+  {% endif %}
+
+  <header class="specimen">
+    <h1 class="specimen__binomial specimen__binomial--upright">{{ title }}</h1>
+    {% if category %}<p class="specimen__common">{{ category }}</p>{% endif %}
+  </header>
+
+  <dl class="product-meta">
+    <dt>Medium</dt>
+    <dd>{{ medium }}</dd>
+
+    <dt>Dimensions</dt>
+    <dd>{{ dimensions }}</dd>
+
+    {% if edition %}
+      <dt>Edition</dt>
+      <dd>{{ edition }}</dd>
+    {% endif %}
+
+    <dt>Price</dt>
+    <dd class="product-meta__price">{{ price }} SEK</dd>
+
+    <dt>Status</dt>
+    <dd class="product-meta__status--{{ status }}">
+      {% if status == "available" %}Available
+      {% elif status == "sold" %}No longer available
+      {% elif status == "limited" %}Limited availability
+      {% endif %}
+    </dd>
+  </dl>
+
+  <hr class="rule--ornate">
+
+  {{ content | safe }}
+
+  <p class="product__inquiry">To inquire about this ware, contact <a href="https://www.instagram.com/hemlock_bay">@hemlock_bay</a> on Instagram, or visit at a listed market appearance.</p>
+</article>
