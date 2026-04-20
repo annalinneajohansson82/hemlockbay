@@ -4,11 +4,12 @@ layout: layouts/base.njk
 
 <article class="entry">
   {% if tab or plate %}
-    <p class="plate">
+    {% set _plateLabel %}{% if tab %}Tab {{ tab }}{% endif %}{% if tab and plate %}, Plate {{ plate }}{% endif %}{% if institute %}, {{ institute }}{% endif %}{% endset %}
+    <p class="plate" aria-label="{{ _plateLabel | trim }}">
       {% if tab %}Tab. {{ tab | roman }}{% endif %}
-      {% if tab and plate %} &middot; {% endif %}
+      {% if tab and plate %}<span aria-hidden="true"> &middot; </span>{% endif %}
       {% if plate %}Pl. {{ plate | roman }}{% endif %}
-      {% if institute %} &middot; {{ institute }}{% endif %}
+      {% if institute %}<span aria-hidden="true"> &middot; </span>{{ institute }}{% endif %}
     </p>
   {% endif %}
 
