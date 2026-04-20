@@ -302,6 +302,34 @@ hr {
   color: inherit;
 }
 
+.specimen__binomial--upright { font-style: normal; }
+
+.product-meta {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.6rem 2.5rem;
+  margin: 2rem 0 2.5rem;
+  font-size: 0.9rem;
+}
+.product-meta dt {
+  font-family: var(--serif-caps);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  align-self: baseline;
+  padding-top: 0.15em;
+}
+.product-meta dd { margin: 0; color: var(--ink-dim); }
+.product-meta__price { font-family: var(--serif-display); font-size: 1.1rem; color: var(--ink); font-weight: 500; }
+.product-meta__status--available { color: var(--brass); }
+.product-meta__status--sold { color: var(--ink-faint); font-style: italic; }
+.product-meta__status--limited { color: var(--ink-dim); }
+.product__inquiry { font-family: var(--serif-display); font-style: italic; color: var(--ink-dim); font-size: 0.95rem; margin-top: 2rem; border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+.catalogue-list__status { font-style: italic; }
+.catalogue-list__status--sold { color: var(--ink-faint); }
+.catalogue-list__status--limited { color: var(--ink-dim); }
+
 /* -- Colophon (footer) ----------------------------------------- */
 .colophon {
   max-width: var(--measure);

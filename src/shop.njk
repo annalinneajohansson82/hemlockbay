@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+title: "The Shop"
+permalink: /shop/
+---
+
+<p class="plate">The Shop</p>
+
+<header class="specimen">
+  <h1 class="specimen__binomial specimen__binomial--upright">The Shop</h1>
+  <p class="specimen__common">Wares from the archive</p>
+</header>
+
+<ul class="catalogue-list">
+  {% for ware in collections.shop %}
+    <li>
+      <span class="catalogue-list__plate">{{ ware.data.item_id or "&mdash;" }}</span>
+      <a href="{{ ware.url }}">{{ ware.data.title }}</a>{% if ware.data.status == "sold" %} <span class="catalogue-list__status catalogue-list__status--sold">&middot; Sold</span>{% elif ware.data.status == "limited" %} <span class="catalogue-list__status catalogue-list__status--limited">&middot; Limited</span>{% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+<p class="product__inquiry">To inquire about any listed ware, contact <a href="https://www.instagram.com/hemlock_bay">@hemlock_bay</a> on Instagram.</p>

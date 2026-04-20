@@ -29,6 +29,16 @@ To add a new collection: create a folder, add a `.11tydata.js` following the exi
 
 **Layouts** (`src/_includes/layouts/`): `base.njk` is the HTML shell; `entry.njk` and `institution.njk` extend it with collection-specific markup.
 
+## Shop Collection
+
+- Folder: `src/shop/` → URL: `/shop/`
+- Nav label and page title: "The Shop"
+- Individual items are called **wares** in body copy — never "products" or "items"
+- Frontmatter fields: `title`, `item_id`, `category`, `medium`, `dimensions`, `price` (integer, SEK), `status`, optionally `edition`
+- `status` values: `available`, `sold`, `limited`
+- No checkout or cart; all purchases via Instagram @hemlock_bay or at listed market appearances
+- Layout: `layouts/product.njk`; listing page: `src/shop.njk`
+
 ## Aesthetic Constraints
 
 The site simulates a Victorian-era archival museum cataloguing cryptobiological specimens. CSS (`src/assets/css/archival.css`) is hand-rolled with no frameworks:
