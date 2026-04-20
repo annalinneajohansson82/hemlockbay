@@ -14,9 +14,11 @@ permalink: "/entries/"
 <ul class="catalogue-list">
   {% for entry in collections.entries %}
     <li>
-      <span class="catalogue-list__plate">
-        {% if entry.data.tab %}Tab. {{ entry.data.tab | roman }}{% else %}&mdash;{% endif %}
-      </span>
+      {% if entry.data.tab %}
+        <span class="catalogue-list__plate" aria-label="Tab {{ entry.data.tab }}">Tab. {{ entry.data.tab | roman }}</span>
+      {% else %}
+        <span class="catalogue-list__plate" aria-hidden="true">&mdash;</span>
+      {% endif %}
       <a href="{{ entry.url }}">
         <em>{{ entry.data.binomial or entry.data.title }}</em>{% if entry.data.common %} &middot; {{ entry.data.common }}{% endif %}
       </a>

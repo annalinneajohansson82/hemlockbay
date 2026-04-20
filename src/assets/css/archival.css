@@ -18,8 +18,8 @@
   --brass:          #a68853;
   --brass-dim:      #6b5838;
 
-  /* Thin rules */
-  --rule:           #3a2f22;
+  /* Thin rules — #6e6256 on #0e0b08 ≈ 3.4:1, meets WCAG 1.4.11 */
+  --rule:           #6e6256;
 
   /* Typography */
   --serif-text:     "Libre Baskerville", Georgia, "Times New Roman", serif;
@@ -108,6 +108,8 @@ img {
   color: var(--ink-dim);
   border: 0;
   margin: 0 1rem;
+  padding: 0.35rem 0;
+  display: inline-block;
 }
 
 .masthead__nav a:hover,
@@ -182,7 +184,7 @@ strong {
 a {
   color: var(--brass);
   text-decoration: none;
-  border-bottom: 1px solid var(--brass-dim);
+  border-bottom: 1px solid var(--brass);
   transition: color 150ms ease, border-color 150ms ease;
 }
 
@@ -195,7 +197,7 @@ a:focus-visible {
 blockquote {
   margin: 2em 0;
   padding: 0 1.5em;
-  border-left: 1px solid var(--brass-dim);
+  border-left: 2px solid var(--brass);
   font-family: var(--serif-display);
   font-style: italic;
   font-size: 1.15rem;
@@ -349,6 +351,28 @@ hr {
 }
 
 /* -- Accessibility --------------------------------------------- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1.25rem;
+  background: var(--ground);
+  color: var(--ink);
+  border: 1px solid var(--brass);
+  z-index: 100;
+  font-family: var(--serif-caps);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
 :focus-visible {
   outline: 2px solid var(--brass);
   outline-offset: 3px;
