@@ -91,7 +91,7 @@ img {
   font-family: var(--serif-display);
   font-style: italic;
   font-size: 1rem;
-  color: var(--ink-faint);
+  color: var(--ink-dim);
   margin: 0.6rem 0 0;
   letter-spacing: 0.05em;
 }
@@ -318,7 +318,7 @@ hr {
   font-size: 0.62rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: var(--ink-dim);
   align-self: baseline;
   padding-top: 0.15em;
 }
@@ -342,7 +342,7 @@ hr {
   font-family: var(--serif-caps);
   font-size: 0.65rem;
   letter-spacing: 0.3em;
-  color: var(--ink-faint);
+  color: var(--ink-dim);
   text-transform: uppercase;
 }
 
