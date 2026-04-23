@@ -4,14 +4,14 @@ title: "The Shop"
 permalink: /shop/
 ---
 
-<p class="plate">The Shop</p>
+<p class="plate" aria-hidden="true">The Shop</p>
 
 <header class="specimen">
   <h1 class="specimen__binomial specimen__binomial--upright">The Shop</h1>
   <p class="specimen__common">Wares from the archive</p>
 </header>
 
-<ul class="catalogue-list">
+<ul class="catalogue-list" role="list">
   {% for ware in collections.shop %}
     <li>
       <span class="catalogue-list__plate">{{ ware.data.item_id or "&mdash;" }}</span>

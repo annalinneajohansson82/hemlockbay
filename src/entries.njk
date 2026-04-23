@@ -11,7 +11,7 @@ permalink: "/entries/"
   <p class="specimen__common">Classified specimens of record</p>
 </header>
 
-<ul class="catalogue-list">
+<ul class="catalogue-list" role="list">
   {% for entry in collections.entries %}
     <li>
       {% if entry.data.tab %}
