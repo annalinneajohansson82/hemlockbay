@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 
-<article class="entry">
+<article class="entry" aria-labelledby="entry-title">
   {% if tab or plate %}
     {% set _plateLabel %}{% if tab %}Tab {{ tab }}{% endif %}{% if tab and plate %}, Plate {{ plate }}{% endif %}{% if institute %}, {{ institute }}{% endif %}{% endset %}
     <p class="plate" aria-label="{{ _plateLabel | trim }}">
@@ -14,7 +14,7 @@ layout: layouts/base.njk
   {% endif %}
 
   <header class="specimen">
-    <h1 class="specimen__binomial">{{ binomial or title }}</h1>
+    <h1 id="entry-title" class="specimen__binomial">{{ binomial or title }}</h1>
     {% if common %}<p class="specimen__common">{{ common }}</p>{% endif %}
   </header>
 

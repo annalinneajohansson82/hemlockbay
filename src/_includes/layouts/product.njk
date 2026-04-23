@@ -2,13 +2,13 @@
 layout: layouts/base.njk
 ---
 
-<article class="product">
+<article class="product" aria-labelledby="product-title">
   {% if item_id %}
     <p class="plate">Accession No. {{ item_id }}</p>
   {% endif %}
 
   <header class="specimen">
-    <h1 class="specimen__binomial specimen__binomial--upright">{{ title }}</h1>
+    <h1 id="product-title" class="specimen__binomial specimen__binomial--upright">{{ title }}</h1>
     {% if category %}<p class="specimen__common">{{ category }}</p>{% endif %}
   </header>
 
