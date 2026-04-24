@@ -14,7 +14,7 @@ permalink: /shop/
 <ul class="catalogue-list">
   {% for ware in collections.shop %}
     <li>
-      <span class="catalogue-list__plate">{{ ware.data.item_id or "&mdash;" }}</span>
+      {% if ware.data.item_id %}<span class="catalogue-list__plate">{{ ware.data.item_id }}</span>{% else %}<span class="catalogue-list__plate" aria-hidden="true">—</span>{% endif %}
       <a href="{{ ware.url }}">{{ ware.data.title }}</a>{% if ware.data.status == "sold" %} <span class="catalogue-list__status catalogue-list__status--sold"><span aria-hidden="true">&middot; </span>Sold</span>{% elif ware.data.status == "limited" %} <span class="catalogue-list__status catalogue-list__status--limited"><span aria-hidden="true">&middot; </span>Limited availability</span>{% endif %}
     </li>
   {% endfor %}
