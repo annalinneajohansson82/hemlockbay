@@ -12,13 +12,13 @@
   /* Parchment hierarchy */
   --ink:            #e8dfc9;
   --ink-dim:        #b8ad93;
-  --ink-faint:      #857b65;
+  --ink-faint:      #8c8268; /* #8c8268 on #0e0b08 ≈ 5.2:1, meets WCAG 1.4.3 */
 
   /* Muted brass, used sparingly */
   --brass:          #a68853;
   --brass-dim:      #6b5838;
 
-  /* Thin rules — #6e6256 on #0e0b08 ≈ 3.4:1, meets WCAG 1.4.11 */
+  /* Thin rules — #6e6256 on #0e0b08 ≈ 3.3:1, meets WCAG 1.4.11 */
   --rule:           #6e6256;
 
   /* Typography */
@@ -108,13 +108,17 @@ img {
   color: var(--ink-dim);
   border: 0;
   margin: 0 1rem;
-  padding: 0.35rem 0;
+  padding: 0.5rem 0.25rem; /* min 24×24px touch target per WCAG 2.5.8 */
   display: inline-block;
 }
 
 .masthead__nav a:hover,
 .masthead__nav a:focus-visible {
   color: var(--brass);
+}
+
+.masthead__nav [aria-current="page"] {
+  color: var(--ink);
 }
 
 /* -- Headings -------------------------------------------------- */
@@ -367,7 +371,7 @@ hr {
   text-decoration: none;
 }
 
-.skip-link:focus {
+.skip-link:focus-visible {
   top: 1rem;
   outline: 2px solid var(--brass);
   outline-offset: 2px;
