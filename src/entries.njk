@@ -20,7 +20,7 @@ permalink: "/entries/"
         <span class="catalogue-list__plate" aria-hidden="true">&mdash;</span>
       {% endif %}
       <a href="{{ entry.url }}">
-        <em>{{ entry.data.binomial or entry.data.title }}</em>{% if entry.data.common %} &middot; {{ entry.data.common }}{% endif %}
+        <em>{{ entry.data.binomial or entry.data.title }}</em>{% if entry.data.common %}<span aria-hidden="true"> &middot; </span>{{ entry.data.common }}{% endif %}
       </a>
     </li>
   {% endfor %}
