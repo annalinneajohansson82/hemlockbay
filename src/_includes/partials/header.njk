@@ -3,8 +3,8 @@
   <p class="masthead__title"><a href="/">{{ site.title }}</a></p>
   <p class="masthead__tagline">{{ site.motto }}</p>
   <nav class="masthead__nav" aria-label="Primary">
-    <a href="/entries/">Catalogue</a>
-    <a href="/institutions/">Institutions</a>
-    <a href="/shop/">The Shop</a>
+    <a href="/entries/"{% if page.url and page.url.startsWith('/entries/') %} aria-current="page"{% endif %}>Catalogue</a>
+    <a href="/institutions/"{% if page.url and page.url.startsWith('/institutions/') %} aria-current="page"{% endif %}>Institutions</a>
+    <a href="/shop/"{% if page.url and page.url.startsWith('/shop/') %} aria-current="page"{% endif %}>The Shop</a>
   </nav>
 </header>
