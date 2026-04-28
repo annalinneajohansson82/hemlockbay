@@ -117,6 +117,10 @@ img {
   color: var(--brass);
 }
 
+.masthead__nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
 /* -- Headings -------------------------------------------------- */
 h1, h2, h3, h4 {
   font-family: var(--serif-display);
@@ -290,7 +294,7 @@ hr {
 }
 
 .catalogue-list a {
-  border: 0;
+  border-bottom: 1px solid var(--rule);
   color: var(--ink);
   flex: 1;
 }
@@ -298,6 +302,7 @@ hr {
 .catalogue-list a:hover,
 .catalogue-list a:focus-visible {
   color: var(--brass);
+  border-bottom-color: var(--brass);
 }
 
 .catalogue-list em {
@@ -318,7 +323,7 @@ hr {
   font-size: 0.62rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: var(--ink-dim);
   align-self: baseline;
   padding-top: 0.15em;
 }
@@ -342,7 +347,7 @@ hr {
   font-family: var(--serif-caps);
   font-size: 0.65rem;
   letter-spacing: 0.3em;
-  color: var(--ink-faint);
+  color: var(--ink-dim);
   text-transform: uppercase;
 }
 
