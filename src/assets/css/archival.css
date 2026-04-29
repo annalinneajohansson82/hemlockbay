@@ -12,7 +12,7 @@
   /* Parchment hierarchy */
   --ink:            #e8dfc9;
   --ink-dim:        #b8ad93;
-  --ink-faint:      #857b65;
+  --ink-faint:      #8b8070;
 
   /* Muted brass, used sparingly */
   --brass:          #a68853;
@@ -115,6 +115,11 @@ img {
 .masthead__nav a:hover,
 .masthead__nav a:focus-visible {
   color: var(--brass);
+}
+
+.masthead__nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom: 1px solid currentColor;
 }
 
 /* -- Headings -------------------------------------------------- */
@@ -376,6 +381,10 @@ hr {
 :focus-visible {
   outline: 2px solid var(--brass);
   outline-offset: 3px;
+}
+
+#main-content:focus {
+  outline: none;
 }
 
 ::selection {
