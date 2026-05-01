@@ -26,6 +26,9 @@ module.exports = function (eleventyConfig) {
     return out;
   });
 
+  // --- String startsWith helper for aria-current nav detection
+  eleventyConfig.addFilter("startsWith", (str, prefix) => String(str).startsWith(prefix));
+
   // --- Archival-style date filter
   eleventyConfig.addFilter("archivalDate", function (date) {
     if (!date) return "";
