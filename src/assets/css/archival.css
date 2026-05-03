@@ -352,7 +352,7 @@ hr {
 
 /* -- Accessibility --------------------------------------------- */
 .skip-link {
-  position: absolute;
+  position: fixed;
   top: -100%;
   left: 1rem;
   padding: 0.5rem 1.25rem;
