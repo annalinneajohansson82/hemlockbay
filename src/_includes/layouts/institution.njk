@@ -7,7 +7,7 @@ layout: layouts/base.njk
 
   <header class="specimen">
     <h1 class="specimen__binomial">{{ name or title }}</h1>
-    {% if motto %}<p class="specimen__common">{{ motto }}</p>{% endif %}
+    {% if motto %}<p class="specimen__common" lang="la">{{ motto }}</p>{% endif %}
   </header>
 
   {{ content | safe }}
